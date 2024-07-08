@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results for "{{ query }}"</h1>
+    <ul>
+        {% for car in cars %}
+            <li><a href="{% url 'car_detail' car.id %}">{{ car.company_name }} {{ car.car_name }} ({{ car.make_year }})</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

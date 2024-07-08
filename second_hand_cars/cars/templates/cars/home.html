@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Second Hand Cars</title>
+</head>
+<body>
+    <h1>Second Hand Cars</h1>
+    <form method="get" action="{% url 'search' %}">
+        <input type="text" name="q" placeholder="Search for cars...">
+        <button type="submit">Search</button>
+    </form>
+    <form method="get" action="{% url 'compare_cars' %}">
+        <ul>
+            {% for car in cars %}
+                <li>
+                    <input type="checkbox" name="car_ids" value="{{ car.id }}">
+                    <a href="{% url 'car_detail' car.id %}">{{ car.company_name }} {{ car.car_name }} ({{ car.make_year }})</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <button type="submit">Compare Selected Cars</button>
+    </form>
+</body>
+</html>

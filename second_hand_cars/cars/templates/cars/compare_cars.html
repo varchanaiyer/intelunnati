@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compare Cars</title>
+</head>
+<body>
+    <h1>Compare Cars</h1>
+    <table border="1">
+        <tr>
+            <th>Attribute</th>
+            {% for car in cars %}
+                <th>{{ car.company_name }} {{ car.car_name }}</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Make Year</td>
+            {% for car in cars %}
+                <td>{{ car.make_year }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Fuel Type</td>
+            {% for car in cars %}
+                <td>{{ car.fuel_type }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Tyre Condition</td>
+            {% for car in cars %}
+                <td>{{ car.tyre_condition }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Mileage</td>
+            {% for car in cars %}
+                <td>{{ car.mileage }} km</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Price</td>
+            {% for car in cars %}
+                <td>{{ car.price }} currency units</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Transmission Type</td>
+            {% for car in cars %}
+                <td>{{ car.transmission_type }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Body Color</td>
+            {% for car in cars %}
+                <td>{{ car.body_color }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Service Record</td>
+            {% for car in cars %}
+                <td>{{ car.service_record }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Insurance</td>
+            {% for car in cars %}
+                <td>{{ car.insurance }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Registration Certificate</td>
+            {% for car in cars %}
+                <td>{{ car.registration_certificate }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Accessories</td>
+            {% for car in cars %}
+                <td>{{ car.accessories }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+</body>
+</html>
